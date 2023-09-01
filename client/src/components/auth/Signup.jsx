@@ -49,8 +49,8 @@ function Signup() {
   }, []);
 
   return (
-    <Container className="d-flex justify-content-center align-items-center">
-    <Card style={{ maxWidth: "500px", width: "100%","backgroundColor":"#252e5f",color:"aliceblue" ,margin:"30px auto"}}>
+    <Container className="d-flex justify-content-center align-items-center ">
+    <Card style={{ maxWidth: "500px", width: "100%","backgroundColor":"#252e5f",color:"aliceblue",margin:"40px auto"}}>
       <div className="position-relative">
         <div
           className="position-absolute text-center top-50 start-50 translate-middle border border-info p-2 "

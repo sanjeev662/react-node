@@ -6,7 +6,6 @@ import Table from "react-bootstrap/Table";
 import { useEffect } from "react";
 
 function Home() {
-
   const userTableData = [
     {
       id: 1,
@@ -40,11 +39,11 @@ function Home() {
     },
   ];
 
-  
   const history = useNavigate();
   const userDataString = localStorage.getItem("user");
   const userData = JSON.parse(userDataString);
-  const displayName = userData && userData.name ? userData.name.toUpperCase() : "NAME NOT FOUND";
+  const displayName =
+    userData && userData.name ? userData.name.toUpperCase() : "NAME NOT FOUND";
 
   const logout = async () => {
     localStorage.removeItem("token");
@@ -59,16 +58,16 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <Navbar className="bg-body-tertiary">
+    <div className="bg-white">
+      <Navbar className="bg-body-tertiary ">
         <Container>
           <Navbar.Brand href="#home">React-Node-Test</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-          <span style={{ fontWeight: '600' }}>{displayName}</span>
+            <span style={{ fontWeight: "600" }}>{displayName}</span>
             <Card style={{ margin: "2px 15px" }}>
               <Card.Body className="p-2">
-              <span style={{ fontWeight: 'bold' }} onClick={logout}>
+                <span style={{ fontWeight: "bold" }} onClick={logout}>
                   Logout
                 </span>
               </Card.Body>
@@ -77,7 +76,9 @@ function Home() {
         </Container>
       </Navbar>
       <Container className="vh-100">
-        <h1 style={{ textAlign: "center" ,marginTop:"30px" }}>Welcome to React Node Test!</h1>
+        <h1 style={{ textAlign: "center", marginTop: "35px" }}>
+          Welcome to React Node Test!
+        </h1>
         <br />
         <Table responsive>
           <thead>
@@ -100,7 +101,7 @@ function Home() {
           </tbody>
         </Table>
       </Container>
-    </>
+    </div>
   );
 }
 
