@@ -76,7 +76,7 @@ function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Container>
+      <Container className="vh-100">
         <h1 style={{ textAlign: "center" ,marginTop:"30px" }}>Welcome to React Node Test!</h1>
         <br />
         <Table responsive>

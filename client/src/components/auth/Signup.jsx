@@ -49,9 +49,33 @@ function Signup() {
   }, []);
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-100">
-      <Card style={{ maxWidth: "400px", width: "100%" }}>
-        <Card.Body>
+    <Container className="d-flex justify-content-center align-items-center">
+    <Card style={{ maxWidth: "500px", width: "100%","backgroundColor":"#252e5f",color:"aliceblue" ,margin:"30px auto"}}>
+      <div className="position-relative">
+        <div
+          className="position-absolute text-center top-50 start-50 translate-middle border border-info p-2 "
+          style={{ width: "150px", zIndex: 1, backgroundColor:"#02edda",borderRadius:"2px" }}
+        >
+          SIGN UP
+        </div>
+      </div>
+      <Card.Body >
+        <div
+          className="text-white rounded-circle d-flex align-items-center justify-content-center"
+          style={{
+            width: "100px",
+            height: "100px",
+            fontSize: "28px",
+            margin: "30px auto 10px",
+            backgroundColor: "#02edda",
+          }}
+        >
+          <img
+            src="./avtar.png"
+            alt="Avatar"
+            style={{ width: "100%", height: "100%", objectFit: "cover"}}
+          />
+        </div>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>Name</Form.Label>
@@ -64,7 +88,7 @@ function Signup() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formDOB">
+            <Form.Group className="mb-2" controlId="formDOB">
               <Form.Label>Date of Birth</Form.Label>
               <Form.Control
                 type="date"
@@ -75,7 +99,7 @@ function Signup() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-2" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
@@ -86,7 +110,7 @@ function Signup() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-2" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
@@ -97,11 +121,11 @@ function Signup() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Group className="mb-2" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Remember me" />
             </Form.Group>
 
-            <Button variant="primary w-100" type="submit">
+            <Button variant="primary w-100" type="submit" style={{backgroundColor:"#02edda"}}>
               Signup
             </Button>
           </Form>

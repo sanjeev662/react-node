@@ -6,7 +6,7 @@ import Home from "./components/home/Home";
 
 function App() {
   return (
-    <div style={{ minWidth: "min-content" }}>
+    <div style={{ minWidth: "min-content","backgroundColor":"#00a2a5"}}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}></Route>
